@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mua Bán Tài Khoản eFootball 2026</title>
+   
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    
+    <aside class="sidebar" id="sidebar">
+        <div class="logo">eFootball<span>Store</span></div>
+        <ul class="nav-menu">
+            <li class="nav-item active" onclick="filterCategory('all', this)">Trang Chủ</li>
+            <li class="nav-item" onclick="filterCategory('new', this)">Acc Game Mới</li>
+            <li class="nav-item" onclick="filterCategory('cheap', this)">Acc Giá Rẻ</li>
+            <li class="nav-item" onclick="filterCategory('vip', this)">Acc Đội Hình Xịn</li>
+            <li class="nav-item">Nạp Coin eFootball</li>
+            <li class="nav-item">Hướng Dẫn Mua Hàng</li>
+        </ul>
+        <div class="contact-info">
+            <p>Hỗ trợ 24/7</p>
+            <p><strong>Zalo: 0961.271.918</strong></p>
+        </div>
+    </aside>
+
+    
+    <main class="main-content">
+
+        
+        <header class="header">
+            <button class="hamburger-btn" id="hamburgerBtn" style="font-size: 24px; border: none; background: transparent; cursor: pointer; color: var(--primary-color);">&#9776;</button>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Nhập mã thẻ hoặc tên cầu thủ...">
+                <button class="search-btn">Tìm Kiếm</button>
+            </div>
+            
+            <div class="sort-bar" style="margin-left: 15px;">
+                <select id="sortSelect" style="padding: 10px; border-radius: 6px; border: 1px solid var(--border-color); outline: none; font-family: inherit; font-size: 14px; cursor: pointer;">
+                    <option value="default">Sắp xếp: Mặc định</option>
+                    <option value="price-asc">Giá: Thấp đến Cao</option>
+                    <option value="price-desc">Giá: Cao đến Thấp</option>
+                </select>
+            </div>
+
+            <div class="user-action">
+                <button class="login-btn" id="loginBtn">Đăng nhập</button>
+            </div>
+        </header>
+
+        
+        <section class="banner">
+            <div class="banner-text">
+                <h1>Chào mừng tới Shop eFootball Uy Tín</h1>
+                <p>Nơi cung cấp các tài khoản đội hình khủng, Epic, Big Time với giá tốt nhất thị trường.</p>
+            </div>
+        </section>
+
+        
+        <section class="products">
+            <h2 class="section-title">🌟 Danh Sách Tài Khoản Nổi Bật</h2>
+
+            <div class="product-grid" id="productGrid">
+
+                
+                <div class="acc-card" data-category="vip" data-price="45,000 đ">
+                    <div class="img-container">
+                        <img class="acc-img" src="acc1.jpg.jpg" alt="Đội hình Acc 1">
+                    </div>
+                    <div class="acc-info">
+                        <h3 class="acc-title">Mã: EF26-001</h3>
+                        <p class="acc-desc">Đội hình Full Epic siêu chất lượng, sẵn sàng cày rank Division 1.</p>
+                        <div class="price">45,000 đ</div>
+                        <button class="buy-btn" onclick="buyAcc('EF26-001')">Mua Ngay</button>
+                    </div>
+                </div>
+
+               
+                <div class="acc-card" data-category="cheap" data-price="25,000 đ">
+                    <div class="img-container">
+                        <img class="acc-img" src="acc2.jpg.jpg" alt="Đội hình Acc 2">
+                    </div>
+                    <div class="acc-info">
+                        <h3 class="acc-title">Mã: EF26-002</h3>
+                        <p class="acc-desc">Tài khoản có nhiều cầu thủ POTW ngon, nhiều Gp và Efootball Point.</p>
+                        <div class="price">25,000 đ</div>
+                        <button class="buy-btn" onclick="buyAcc('EF26-002')">Mua Ngay</button>
+                    </div>
+                </div>
+
+                
+                <div class="acc-card" data-category="new" data-price="150000">
+                    <div class="img-container">
+                        <img class="acc-img" src="acc3.jpg.jpg" alt="Đội hình Acc 3">
+                    </div>
+                    <div class="acc-info">
+                        <h3 class="acc-title">Mã: EF26-003</h3>
+                        <p class="acc-desc">Acc tân thủ siêu hên, đã quay ra nhiều huyền thoại, phù hợp tự Build.</p>
+                        <div class="price">150,000 đ</div>
+                        <button class="buy-btn" onclick="buyAcc('EF26-003')">Mua Ngay</button>
+                    </div>
+                </div>
+
+                
+                <div class="acc-card" data-category="vip" data-price="80000">
+                    <div class="img-container">
+                        <img class="acc-img" src="acc4.jpg.jpg" alt="Đội hình Acc 4">
+                    </div>
+                    <div class="acc-info">
+                        <h3 class="acc-title">Mã: EF26-004</h3>
+                        <p class="acc-desc">Acc VIP sở hữu các cầu thủ giới hạn cực hiếm, lực chiến 3000+.</p>
+                        <div class="price">80,000 đ</div>
+                        <button class="buy-btn" onclick="buyAcc('EF26-004')">Mua Ngay</button>
+                    </div>
+                </div>
+
+                
+                <div class="acc-card" data-category="cheap" data-price="30,000 đ"> 
+                    <div class="img-container">
+                        <img class="acc-img" src="acc5.jpg.jpg" alt="Đội hình Acc 5">
+                    </div>
+                    <div class="acc-info">
+                        <h3 style="color:red;">Mã EF26-005</> </h3>
+                        
+                        <p class="acc-desc">Tài khoản cày chay đều tay, đội bóng cống hiến đầy đủ các thẻ.</p>
+                        <div class="price">30,000 đ</div>
+                        <button class="buy-btn" onclick="buyAcc('EF26-005')">Mua Ngay</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>eFootball<span>Store</span></h3>
+                    <p>Hệ thống mua bán trao đổi tài khoản eFootball uy tín hàng đầu Việt Nam. Giao dịch nhanh gọn, bảo mật.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Chính Sách</h4>
+                    <ul>
+                        <li><a href="#">Bảo hành 100%</a></li>
+                        <li><a href="#">Đổi trả miễn phí</a></li>
+                        <li><a href="#">Bảo mật thông tin</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Cộng Đồng</h4>
+                    <p>Tham gia giao lưu, mua bán:</p>
+                    <a href="#" class="social-icon">Group Facebook</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 eFootballStore. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+    </main>
+
+    
+    <a href="https://zalo.me/0961271918" class="floating-btn" target="_blank">
+        Zalo
+    </a>
+
+    
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Đăng Nhập</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="username">Tên đăng nhập / Zalo</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Mật khẩu</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="submit-btn">Vào Shop</button>
+            </form>
+
+            <div class="divider">
+                <span>Hoặc đăng nhập bằng</span>
+            </div>
+
+            <div class="social-login">
+                <button class="social-btn google-btn" onclick="socialLogin('Google')">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google">
+                    Google
+                </button>
+                <button class="social-btn facebook-btn" onclick="socialLogin('Facebook')">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg"
+                        alt="Facebook">
+                    Facebook
+                </button>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closePaymentBtn">&times;</span>
+            <h2 style="margin-bottom: 20px;">Thông Tin Thanh Toán</h2>
+
+            <div class="qr-container" style="text-align: center; margin-bottom: 20px;">
+                <img id="bankQrCode" src="https://img.vietqr.io/image/mb-0961271918-compact2.png?accountName=Tran+Duc+Quy" alt="Mã QR Thanh Toán" style="max-width: 100%; width: 250px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                <p style="font-size: 14px; color: var(--text-muted); margin-top: 10px;">Quét mã QR để chuyển khoản nhanh</p>
+            </div>
+
+            <div class="bank-info">
+                <p><strong>Ngân hàng:</strong> MB Bank (Ngân hàng Quân Đội)</p>
+                <p><strong>Chủ tài khoản:</strong> Trần Đức Quý</p>
+                <p><strong>Số tài khoản:</strong> <span class="highlight-text" id="bankNumber">0961271918</span> <button
+                        class="copy-btn" onclick="copyBankNumber()">Copy</button></p>
+                <p><strong>Nội dung CK:</strong> <span class="highlight-text" id="transferContent">Mua [Mã Acc]</span>
+                </p>
+            </div>
+
+            <div class="payment-instruction">
+                <p>Vui lòng chuyển khoản đúng số tiền và nội dung. Sau khi chuyển khoản thành công, hãy chụp màn hình
+                    bill và gửi qua Zalo cho Admin.</p>
+            </div>
+
+            <button class="submit-btn" style="background-color: #0068ff;"
+                onclick="window.open('https://zalo.me/0961271918', '_blank')">Nhắn Zalo Nhận Acc</button>
+        </div>
+    </div>
+
+    
+    <div id="imageZoomModal" class="modal" style="background-color: rgba(0,0,0,0.9);">
+        <span class="close-btn" id="closeZoomBtn" style="color: white; right: 30px; font-size: 40px; top: 20px;">&times;</span>
+        <img class="modal-content" id="zoomedImage" style="padding: 0; width: auto; max-width: 90%; max-height: 90vh; background: transparent; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
